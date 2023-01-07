@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: #EEC643;
+  font-size: 60px;
+  background-color: #32373B;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 35% 35% 35%;
+  grid-template-rows: auto;
+  column-gap: 30%;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+.item {
+  /* box-sizing: border-box; */
+  width: 200%;
+  height: 100%;
+}
+
+.greeting {
+  font-size: 100%;
+}
+
+.intro {
+  font-size: 50%;
+}
+
+.work {
+  font-size: 50%;
+}
+
+.languages {
+  font-size: 40%;
+}
+
+.projects {
+  font-size: 30%;
+}
+
+.me {
+  font-size: 50%;
+}
+
