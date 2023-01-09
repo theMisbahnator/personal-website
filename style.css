@@ -1,4 +1,4 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,43 +7,26 @@ body {
   font-size: 60px;
   /* background-color: #32373B; */
   background-color: #002233;
-  scroll-snap-type: y proximity;
-  overflow-y: scroll;
-
+  scroll-snap-type: y mandatory;
 }
 
 section {
-  height: 100vh;
   scroll-snap-align: start;
+  height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* .center {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateY(400%);
-  transition: all 1s;
-}
-
-.show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
-} */
-
 @keyframes change-color {
   0% {
     opacity: 0;
     filter: blur(5px);
-    /* transform: translateY(400%);  */
   }
   100% {
     opacity: 1;
     filter: blur(0);
-    /* transform: translateY(0); */
   }
 }
 
@@ -56,6 +39,9 @@ section {
 .title {
   text-align: center;
 }
+
+
+
 
 .grid-container {
   display: grid;
