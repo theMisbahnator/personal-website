@@ -1,23 +1,33 @@
 // blobs
-const tween = KUTE.fromTo(
+const blob1 = KUTE.fromTo(
     '#blobt4',
     { path: '#blobt4' },
     { path: '#blobt5' },
     { repeat: 999, duration: 5000, yoyo: true }
   )
-
-  const tween2 = KUTE.fromTo(
+  const blob2 = KUTE.fromTo(
     '#blobb4',
     { path: '#blobb4' },
     { path: '#blobb2' },
     { repeat: 999, duration: 5000, yoyo: true }
   )
+  blob1.start();
+  blob2.start();
 
-  tween2.start();
-  tween.start();
+  const waves = []
+  let subject = "layer"
 
-  console.log(window.innerHeight);
-  console.log(window.innerWidth);
+  for (let i = 1; i <= 9; i++) {
+    const wave = KUTE.fromTo (
+        `#${subject}${i}`, 
+        {path: `#${subject}${i}`}, 
+        {path: `#${subject}${i}${i}`}, 
+        {repeat: 999, duration: 3000, yoyo: true}
+    )
+    waves.push(wave); 
+  }
+
+  waves.forEach((wave) => wave.start());
 
 window.addEventListener("scroll", (event) => {
     // blobs 
@@ -32,7 +42,7 @@ window.addEventListener("scroll", (event) => {
     var text = document.getElementById("greeting-text"); 
 
     let fuzz = 0 + (proportion * .5) * 10; 
-    let op = (1 - proportion *.5); 
+    let op = (1 - proportion * 2.2); 
     text.style.opacity = op;
     text.style.filter = `blur(${fuzz}px)`; 
 }); 
