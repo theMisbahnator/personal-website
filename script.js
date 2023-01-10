@@ -16,6 +16,9 @@ const tween = KUTE.fromTo(
   tween2.start();
   tween.start();
 
+  console.log(window.innerHeight);
+  console.log(window.innerWidth);
+
 window.addEventListener("scroll", (event) => {
     // blobs 
     let scroll = this.scrollY;
