@@ -2,12 +2,14 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
-  color: #EEC643;
+  font-family: 'Inter', sans-serif;
+  color: #e9ecef;
   font-size: 60px;
   /* background-color: #32373B; */
-  background-color: #002233;
+  background-color: #1A1A1D;
   scroll-snap-type: y mandatory;
+  border: 1px solid red;
+  /* overflow-x: hidden; */
 }
 
 section {
@@ -81,22 +83,22 @@ svg {
 
 .intro {
   font-size: 50%;
-  background-color: #002233;
+  background-color: #1A1A1D;
 }
 
 .work {
   font-size: 50%;
-  background-color: #31292b;
+  background-color: #1A1A1D;
 }
 
 .languages {
   font-size: 40%;
-  background-color: #cdd3d5;
+  background-color: #1A1A1D;
 }
 
 .projects {
   font-size: 40%;
-  background-color: #f06449;
+  background-color: #1A1A1D;
 }
 
 .me {

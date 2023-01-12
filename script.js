@@ -8,26 +8,39 @@ const blob1 = KUTE.fromTo(
   const blob2 = KUTE.fromTo(
     '#blobb4',
     { path: '#blobb4' },
-    { path: '#blobb2' },
+    { path: '#blobb7' },
     { repeat: 999, duration: 5000, yoyo: true }
   )
   blob1.start();
   blob2.start();
 
-  const waves = []
-  let subject = "layer"
+  const isOverflown = ({ clientWidth, clientHeight, scrollWidth, scrollHeight }) => {
+    return scrollHeight > clientHeight || scrollWidth > clientWidth;
+}
+console.log(isOverflown);
 
-  for (let i = 1; i <= 9; i++) {
-    const wave = KUTE.fromTo (
-        `#${subject}${i}`, 
-        {path: `#${subject}${i}`}, 
-        {path: `#${subject}${i}${i}`}, 
-        {repeat: 999, duration: 3000, yoyo: true}
-    )
-    waves.push(wave); 
+
+  function waves(subject, layers) {
+    const waves = []
+
+    for (let i = 1; i <= layers; i++) {
+        const wave = KUTE.fromTo (
+            `#${subject}${i}`, 
+            {path: `#${subject}${i}`}, 
+            {path: `#${subject}${i}${i}`}, 
+            {repeat: 999, duration: 3000, yoyo: true}
+        )
+        waves.push(wave); 
+      }
+    
+      waves.forEach((wave) => wave.start());
   }
 
-  waves.forEach((wave) => wave.start());
+  waves("layer", 7);
+  waves("w", 5);
+
+
+  
 
 window.addEventListener("scroll", (event) => {
     // blobs 
@@ -52,7 +65,6 @@ window.addEventListener("scroll", (event) => {
 const obs = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            console.log("here");
             entry.target.classList.remove(entry.target.alt);
             entry.target.classList.add(entry.target.atr);
         } 
