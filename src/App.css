@@ -5,7 +5,7 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
-  color: #e9ecef;
+  color: #E9ECEF;
   font-size: 60px;
   /* background-color: #32373B; */
   background-color: #1A1A1D;
@@ -69,7 +69,7 @@ svg {
 
 .item {
   /* box-sizing: border-box; */
-  width: 200%;
+  width: 170%;
   height: 100%;
 }
 
@@ -92,6 +92,44 @@ svg {
   background-color: #1A1A1D;
 }
 
+/* .top-level {
+  width: 300px;
+  height: 200px;
+} */
+
+.work-card {
+  width: 50%; /* or whatever width you want. */
+  height: 30%;
+  border: 2px solid white;
+  border-radius: 15%;
+  padding: 1%; 
+}
+
+.center {
+  text-align: center;
+}
+
+.work-title {
+  font-size: 110%;
+}
+
+.work-detail {
+  margin-left: 10%;
+}
+
+.work-term{
+  font-size: 60%;
+}
+
+.work-text {
+  font-size: 60%;
+}
+
+.work-skill{
+  font-size: 40%;
+}
+
+
 .languages {
   font-size: 40%;
   background-color: #1A1A1D;
@@ -106,3 +144,4 @@ svg {
   font-size: 50%;
   background-color: #f5cda7;
 }
+
