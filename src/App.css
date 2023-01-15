@@ -159,11 +159,16 @@ svg {
 .languages {
   font-size: 40%;
   background-color: #1A1A1D;
+  background-image: url('images/blur2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .projects {
   font-size: 40%;
-  background-color: #1A1A1D;
+  color: #1A1A1D;
+  background-color: #818584;
 }
 
 .me {
