@@ -6,7 +6,7 @@ html, body {
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
   color: #E9ECEF;
-  font-size: 60px;
+  font-size: 200%;
   /* background-color: #32373B; */
   background-color: #1A1A1D;
   scroll-snap-type: y mandatory;
@@ -67,6 +67,16 @@ svg {
   align-items: center;
 }
 
+.container-job {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  column-gap: 30%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
 .item {
   /* box-sizing: border-box; */
   width: 170%;
@@ -98,12 +108,28 @@ svg {
 } */
 
 .work-card {
-  width: 50%; /* or whatever width you want. */
-  height: 30%;
+  width: 30vw; /* or whatever width you want. */
+  height: 20vh;
+  height: auto;
+  font-size: 90%;
   border: 2px solid white;
   border-radius: 15%;
   padding: 1%; 
 }
+
+@media only screen and (max-width: 1200px) {
+  /* .work-card {
+    font-size: 30%;
+  } */
+
+  .intro {
+    font-size: 30%;
+  }
+}
+
+/* .logo {
+  filter: grayscale(100%);
+} */
 
 .center {
   text-align: center;
