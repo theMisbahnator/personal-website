@@ -9,7 +9,7 @@ const tools = ["git", "aws s3, rds, lambda", "postgresql", "mysql", "mongodb", "
 const Skills = () => {
   return (
     <section className="languages">
-        <SkillsList className="center" languages={languages} frameworks={frameworks} tools={tools}/>
+        {/* <SkillsList className="center" languages={languages} frameworks={frameworks} tools={tools}/> */}
     </section>
   )
 }
