@@ -5,8 +5,6 @@ import Ibm from '../images/ibm.png'
 import Paycom from '../images/paycom.png'
 import Nordstrom from '../images/nord.png'
 import Gray_Nord from '../images/nordstrom.png'
-import { is } from '@babel/types'
-
 
 const paycom = {
     name: "paycom",
@@ -43,9 +41,9 @@ const atlassian = {
     image: Atlassian
 }
 
-let index = 0;
+// let index = 0;
 
-const workplaces = [paycom, ibm, nordstrom, atlassian]
+// const workplaces = [paycom, ibm, nordstrom, atlassian]
 
 const Work = () => {
     const [isJob, setJob] = useState(paycom);
@@ -54,19 +52,19 @@ const Work = () => {
     const [atlGray, setatlGray] = useState("grayscale(100%)");
 
     const handleClick = (company) => {
-        if (company == paycom) {
+        if (company === paycom) {
             setJob(paycom);
             setPaycomGray("grayscale(0)");
             setatlGray("grayscale(100%)");
             setibmGray("grayscale(100%)");
             nordstrom.image = Gray_Nord;
-        } else if (company == ibm) {
+        } else if (company === ibm) {
             setJob(ibm);
             setibmGray("grayscale(0)");
             setatlGray("grayscale(100%)");
             setPaycomGray("grayscale(100%)");
             nordstrom.image = Gray_Nord;
-        } else if (company == atlassian) {
+        } else if (company === atlassian) {
             setJob(atlassian);
             setatlGray("grayscale(0)");
             setibmGray("grayscale(100%)");
@@ -91,7 +89,7 @@ const Work = () => {
                 <div style={{ display: "grid", justifyContent: "center", alignItems: "center", gridTemplateColumns: "50% 50%", columnGap: "10%" }}>
                     <div className='center'>
                         <div>
-                            <span><img src={paycom.image} alt={"paycom"} style={{ filter: paycomGray }} onClick={() => { handleClick(paycom) }} /> </span>
+                            <span><img src={paycom.image} alt={"paycom"} style={{ filter: paycomGray }} onClick={() => { handleClick(paycom) } } /> </span>
                         </div>
                         <div>
                             <div style={{ display: "flex", alignItems: "center", height: "100%" }}>

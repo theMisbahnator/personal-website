@@ -1,9 +1,4 @@
-import React, { useState } from 'react'
-
-
 const WorkCard = ({image, name, term, title, key, work, skills, show}) => {
-
-
     return (
         <div className='work-card'>
                 <div className="center">
