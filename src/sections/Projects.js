@@ -43,6 +43,7 @@ const Projects = () => {
     <section className='projects'>
         <div className="title">
             <p className='highlight'>what have i made?</p>
+            {/* hello */}
         </div>
         <div className='proj-container'>
             {projects.map(items => <ProjectCard project={items}/>)}
