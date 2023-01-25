@@ -81,33 +81,20 @@ const Work = () => {
 
     return (
         <section className="work">
-            <div style={{ display: "grid" }}>
-                <div className="title">
+                <div className="center work-page-title ">
                     <p>where have i worked?</p>
                 </div>
-
-                <div style={{ display: "grid", justifyContent: "center", alignItems: "center", gridTemplateColumns: "50% 50%", columnGap: "10%" }}>
-                    <div className='center'>
-                        <div>
-                            <span><img src={paycom.image} alt={"paycom"} style={{ filter: paycomGray }} onClick={() => { handleClick(paycom) } } /> </span>
-                        </div>
-                        <div>
-                            <div style={{ display: "flex", alignItems: "center", height: "100%" }}>
-                                <span><img className="logo" src={ibm.image} alt={"ibm"} style={{ margin: "40px", filter: ibmGray }} onClick={() => { handleClick(ibm) }} /> </span>
-                                <span style={{ marginBottom: "10px" }}>click me!</span>
-                                <span><img className="logo" src={atlassian.image} alt={"atlassian"} style={{ margin: "40px", filter: atlGray }} onClick={() => { handleClick(atlassian) }} /> </span>
-                            </div>
-                        </div>
-                        <div>
-                            <span><img className="logo" src={nordstrom.image} alt={"nordstrom"} onClick={() => { handleClick(nordstrom) }} /></span>
-                        </div>
-                    </div>
-                    <div className='card-container'>
+                <div  className= "work-cont" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                         <WorkCard key={0} name={isJob.name} title={isJob.title} term={isJob.term}
                             work={isJob.work} skills={isJob.skills} image={isJob.image} show={true}></WorkCard>
-                    </div>
                 </div>
-            </div>
+                
+                <div className='jobs' style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
+                    <img className="logo" src={paycom.image} alt={"paycom"} style={{ filter: paycomGray }} onClick={() => { handleClick(paycom) } } />
+                    <img className="logo" src={ibm.image} alt={"ibm"} style={{ filter: ibmGray }} onClick={() => { handleClick(ibm) }} />
+                    <img className="logo" src={nordstrom.image} alt={"nordstrom"} onClick={() => { handleClick(nordstrom) }} />
+                    <img className="logo" src={atlassian.image} alt={"atlassian"} style={{ filter: atlGray }} onClick={() => { handleClick(atlassian) }} />
+                </div>
         </section>
     )
 }

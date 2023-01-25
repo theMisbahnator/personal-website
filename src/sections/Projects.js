@@ -8,14 +8,14 @@ const john_cena = {
 
 const reverbify = {
     title: "reverbify", 
-    desc: "Automated audio processing by adding Daycore/Nightcore twist to your favorite songs on youtube. Created iOS app to stream music.",
-    skills: "golang ·  gin · aws s3 · mongodb · netlify · docker "
+    desc: "automated audio processing by adding daycore/nightcore twist to musical renditions. created ios app to stream music.",
+    skills: "swift · golang · gin · aws s3 · mongodb · netlify · docker "
 }
 
 const pricify = {
     title: "pricify", 
     desc: "android app that creates, aggregates, and stores users wishlist's for their desired items.",
-    skills: "kotlin · mvvm design · firebase"
+    skills: "kotlin · firebase"
 }
 
 const life_on_mars = {
@@ -25,8 +25,8 @@ const life_on_mars = {
 }
 
 const stroke_prediction = {
-    title: "john cena!", 
-    desc: "facial recognition script that plays a song when a person enters a room. created a website to change songs and headshots for users.",
+    title: "stroke predition", 
+    desc: "predicts whether a patient will have a stroke given a set of features. cleaned data and built models with knn, neural nets, decision trees, bayes, and svm’s. ",
     skills: "python · pandas · numpy · matplotlib · scikit-learn"
 }
 
@@ -45,7 +45,7 @@ const Projects = () => {
             <p className='highlight'>what have i made?</p>
             {/* hello */}
         </div>
-        <div className='proj-container'>
+        <div className='proj-container scroll-wheel'>
             {projects.map(items => <ProjectCard project={items}/>)}
         </div>
         

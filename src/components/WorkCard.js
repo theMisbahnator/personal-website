@@ -1,6 +1,7 @@
-const WorkCard = ({image, name, term, title, key, work, skills, show}) => {
+const WorkCard = ({ image, name, term, title, key, work, skills, show }) => {
     return (
         <div className='work-card'>
+            <div className="work-card-content" style={{marginTop:"15px"}}>
                 <div className="center">
                     <span className='work-title'>{name}</span>
                     <span className='work-title'> | {title}</span>
@@ -13,6 +14,7 @@ const WorkCard = ({image, name, term, title, key, work, skills, show}) => {
                     <p className='work-skill'>{skills}</p>
                 </div>
             </div>
+        </div>
     )
 }
 

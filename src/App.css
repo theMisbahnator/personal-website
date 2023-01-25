@@ -89,20 +89,25 @@ section {
 }
 
 .intro {
-  font-size: 30px;
+  font-size: 26px;
   background-color: #1A1A1D;
 }
 
 .work {
   font-size: 30px;
   background-color: #1A1A1D;
+  display: grid;
+  grid-template-rows: 1f 4f 1f;
+  align-items: center;
+  justify-content: center;
 }
 
 .work-card {
-  width: 30vw; /* or whatever width you want. */
-  height: 20vh;
-  height: auto;
-  font-size: 90%;
+  justify-content: center;
+  align-items: center;
+  height: 225px;
+  width: 550px;
+  font-size: 27px;
   border: 2px solid white;
   border-radius: 15%;
   padding: 1%; 
@@ -116,12 +121,23 @@ section {
   text-align: center;
 }
 
+.work-page-title {
+  font-size: 35px;
+}
+
 .work-title {
   font-size: 110%;
 }
 
 .work-detail {
-  margin-left: 10%;
+  margin-left: 25px;
+  margin-right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* padding: 0 10px 0 10px; */
+
 }
 
 .work-term{
@@ -136,11 +152,15 @@ section {
   font-size: 40%;
 }
 
+.scroll-div {
+}
+
 
 .languages {
   font-size: 40%;
-  background-color: #818584;
-  background-image: url('images/blur4.png');
+  /* background-color: #818584; */
+  background-color: #1A1A1D;
+  /* background-image: url('images/blur4.png'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -229,6 +249,15 @@ section {
 
 
 @media (max-width: 1100px) {
+  .greeting {
+    font-size: 50px; 
+  }
+  .intro {
+    font-size: 20px;
+  }
+
+  
+
   .projects {
     grid-template-rows: 130px 550px;
   }
@@ -313,29 +342,33 @@ section {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .proj-container {
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(1, 1fr); */
     border: solid gray;
     height: 600px;
   }
 
   .project-card {
-    width: 120px;
-    height: 120px;
-    font-size: 18px;
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
     padding: 0 30px 0 30px;
   }
 
   .proj-container {
-    border: dashed teal;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    overflow-y: scroll;
   }
 
 
   .project-card {
-    font-size: 12px;
+    font-size: 17px;
   }
 
   .highlight {

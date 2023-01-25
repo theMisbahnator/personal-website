@@ -6,7 +6,7 @@ const Intro = () => {
       <div>
         <div className="title">
           <p id="name-intro">my name is misbah imtiaz. </p>
-          <p id="school-intro">i am a computer science student at the university of texas at austin!</p>
+          <p id="school-intro">i am a junior computer science student at the university of texas at austin!</p>
           <p id="hobby-intro">i like to play basketball, soccer, catan, and watch horror movies.</p>
         </div>
       </div>
