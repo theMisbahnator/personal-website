@@ -40,18 +40,30 @@ const atlassian = {
     skills: "tbd",
     image: Atlassian
 }
+const placeHolder = {
+    message: "where have i worked"
+}
 
 // let index = 0;
 
 // const workplaces = [paycom, ibm, nordstrom, atlassian]
 
 const Work = () => {
-    const [isJob, setJob] = useState(paycom);
+    const [isJob, setJob] = useState(placeHolder);
     const [paycomGray, setPaycomGray] = useState("grayscale(0)");
     const [ibmGray, setibmGray] = useState("grayscale(100%)");
     const [atlGray, setatlGray] = useState("grayscale(100%)");
 
     const handleClick = (company) => {
+        if (isJob === company) {
+            console.log("same job ebing clicked");
+            setatlGray("grayscale(100%)");
+            setibmGray("grayscale(100%)");
+            setPaycomGray("grayscale(100%)");
+            nordstrom.image = Gray_Nord;
+            setJob(placeHolder);
+            return;
+        }
         if (company === paycom) {
             setJob(paycom);
             setPaycomGray("grayscale(0)");
@@ -81,20 +93,26 @@ const Work = () => {
 
     return (
         <section className="work">
-                <div className="center work-page-title ">
-                    <p>where have i worked?</p>
-                </div>
                 <div  className= "work-cont" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                        <WorkCard key={0} name={isJob.name} title={isJob.title} term={isJob.term}
-                            work={isJob.work} skills={isJob.skills} image={isJob.image} show={true}></WorkCard>
+                        {
+                            isJob === placeHolder 
+                                ? <div className='work-card' style={{display: "flex", justifyContent: "center", alignItems: "center", fontSize:"35px"}} >where have i worked?</div>
+                                : <WorkCard key={0} name={isJob.name} title={isJob.title} term={isJob.term}
+                                work={isJob.work} skills={isJob.skills} image={isJob.image} show={true}></WorkCard>
+                        }
                 </div>
                 
-                <div className='jobs' style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
-                    <img className="logo" src={paycom.image} alt={"paycom"} style={{ filter: paycomGray }} onClick={() => { handleClick(paycom) } } />
-                    <img className="logo" src={ibm.image} alt={"ibm"} style={{ filter: ibmGray }} onClick={() => { handleClick(ibm) }} />
-                    <img className="logo" src={nordstrom.image} alt={"nordstrom"} onClick={() => { handleClick(nordstrom) }} />
-                    <img className="logo" src={atlassian.image} alt={"atlassian"} style={{ filter: atlGray }} onClick={() => { handleClick(atlassian) }} />
+                <div className='select-cont' style={{display:"grid", gridTemplateRows:"1f 1f"}}>
+                    <p style={{fontSize:"18px", textAlign:"center"}}>press me!</p>
+                    <div className='jobs' style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
+                        <img className="logo" src={paycom.image} alt={"paycom"} style={{ filter: paycomGray }} onClick={() => { handleClick(paycom) } } />
+                        <img className="logo" src={ibm.image} alt={"ibm"} style={{ filter: ibmGray }} onClick={() => { handleClick(ibm) }} />
+                        <img className="logo" src={nordstrom.image} alt={"nordstrom"} onClick={() => { handleClick(nordstrom) }} />
+                        <img className="logo" src={atlassian.image} alt={"atlassian"} style={{ filter: atlGray }} onClick={() => { handleClick(atlassian) }} />
+                    </div>
                 </div>
+
+                
         </section>
     )
 }
