@@ -19,7 +19,7 @@ const ProjectCard = ({project}) => {
                 <p className='project-title'>{project.title}</p>
             </div>
             : <div className='content'>
-                <p className='project-desc'>{project.desc}</p>
+                <p className='project-desc under-hover'>{project.desc}</p>
                 <p className='project-skills'>{project.skills}</p>
             </div>
         }
