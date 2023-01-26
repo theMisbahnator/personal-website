@@ -1,9 +1,11 @@
 import React from 'react'
+import misbah from '../images/misbah.jpg'
 
 const AboutMe = () => {
   return (
-    <section>
+    <section className="about-me">
         <div class="title" style={{fontSize:"30px"}}>
+        <img className="misbah" alt="misbah" src={misbah}></img>
           <p>
             <span className='under-hover'>work</span>
             <span> | </span> 
@@ -11,7 +13,7 @@ const AboutMe = () => {
             <span> | </span> 
             <span className='under-hover'>projects</span>
           </p>
-          <p>Class of 24'</p>
+          <p>class of 24'</p>
           <p>
             <span className='under-hover'>github</span>
             <span> | </span> 

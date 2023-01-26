@@ -3,8 +3,8 @@ import React from 'react'
 const Greeting = () => {
   return (
     <section className="greeting">
-      <div className="center">
-        <div id="greeting-text">welcome.</div>
+      <div>
+        <div id="greeting-text">hello!</div>
       </div>
 
       {/* <svg id="visual" preserveAspectRatio="none" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg"

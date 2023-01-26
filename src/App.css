@@ -283,6 +283,14 @@ section {
 }
 
 
+.misbah {
+  width: 300px;
+  height: auto;
+  border-radius: 40%;
+  /* margin-right: 50px; */
+}
+
+
 @media (max-width: 1100px) {
   .greeting {
     font-size: 50px; 
