@@ -50,7 +50,7 @@ const placeHolder = {
 
 const Work = () => {
     const [isJob, setJob] = useState(placeHolder);
-    const [paycomGray, setPaycomGray] = useState("grayscale(0)");
+    const [paycomGray, setPaycomGray] = useState("grayscale(100%)");
     const [ibmGray, setibmGray] = useState("grayscale(100%)");
     const [atlGray, setatlGray] = useState("grayscale(100%)");
 

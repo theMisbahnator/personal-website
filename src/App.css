@@ -55,11 +55,10 @@ section {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  column-gap: 30%;
-  justify-content: space-evenly;
-  align-content: space-evenly;
+
+  justify-items: center;
   align-items: center;
 }
 
@@ -73,10 +72,16 @@ section {
   align-items: center;
 }
 
+.list-skills {
+  padding: 0;
+  list-style: none;
+  font-size: 17px;
+}
+
 .item {
   /* box-sizing: border-box; */
-  width: 170%;
-  height: 100%;
+  width: 290px;
+  height: 400px;
 }
 
 .greeting {
@@ -161,7 +166,10 @@ section {
 
 
 .languages {
-  font-size: 40%;
+  font-size: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* background-color: #818584; */
   background-color: #1A1A1D;
   /* background-image: url('images/blur4.png'); */
