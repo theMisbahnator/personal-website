@@ -40,10 +40,9 @@ const projects = [john_cena, reverbify, life_on_mars, pricify, stroke_prediction
 
 const Projects = () => {
   return (
-    <section className='projects'>
+    <section id="projects-page" className='projects'>
         <div className="title">
             <p className='highlight'>what have i made?</p>
-            {/* hello */}
         </div>
         <div className='proj-container scroll-wheel'>
             {projects.map(items => <ProjectCard project={items}/>)}

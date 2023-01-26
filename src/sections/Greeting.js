@@ -2,7 +2,7 @@ import React from 'react'
 
 const Greeting = () => {
   return (
-    <section className="greeting">
+    <section id="greeting-page" className="greeting">
       <div>
         <div id="greeting-text">hello!</div>
       </div>

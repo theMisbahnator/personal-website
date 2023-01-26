@@ -92,7 +92,7 @@ const Work = () => {
     }
 
     return (
-        <section className="work">
+        <section id="work-page" className="work">
                 <div  className= "work-cont" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                         {
                             isJob === placeHolder 
