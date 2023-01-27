@@ -265,6 +265,7 @@ section {
   color: #FFFFFF;
   background-color: #1A1A1D;
   display: grid;
+  grid-template-rows: 300px 300px;
   align-items: center;
 
   /* grid-template-rows: 1fr 2fr; */
@@ -303,12 +304,23 @@ section {
   background-color: #1A1A1D;
 }
 
+.swiper-button {
+  position: absolute;
+  top: 52%;
+  z-index: 10;
+  cursor: pointer;
+}
+.swiper-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .image-swiper-button-prev {
-  left: 5px;
+  left: 140px;
   color:#E9ECEF;
 }
 .image-swiper-button-next {
-  right: 5px;
+  right: 140px;
   color:#E9ECEF;
 }
 .swiper-button-disabled {
