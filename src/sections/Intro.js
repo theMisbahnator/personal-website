@@ -1,4 +1,5 @@
 import React from 'react'
+import down from '../images/bottom-arrow.png'
 
 const Intro = () => {
   return (
@@ -9,6 +10,9 @@ const Intro = () => {
           <p id="school-intro">i am a junior computer science student at the university of texas at austin!</p>
           <p id="hobby-intro">i like to play basketball, soccer, catan, and watch horror movies.</p>
         </div>
+        <a href='#work-page' className='bot-btn'>
+          <img src={down} alt="bottom" style={{width:"30px", height:"30px"}}></img>
+        </a>
       </div>
       {/* <svg preserveAspectRatio="none" width="960" height="540" viewBox="0 0 960 540" fill="none"
         xmlns="http://www.w3.org/2000/svg">

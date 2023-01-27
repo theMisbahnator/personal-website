@@ -1,10 +1,15 @@
 import React from 'react'
+import down from '../images/bottom-arrow.png'
 
 const Greeting = () => {
   return (
     <section id="greeting-page" className="greeting">
       <div>
         <div id="greeting-text">hello!</div>
+        <div style={{fontSize:"20px"}}>site still under construction...</div>
+        <a href='#intro-page' className='bot-btn'>
+          <img src={down} alt="bottom" style={{width:"30px", height:"30px"}}></img>
+        </a>
       </div>
 
       {/* <svg id="visual" preserveAspectRatio="none" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg"

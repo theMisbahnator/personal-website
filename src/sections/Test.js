@@ -1,6 +1,14 @@
-import React from 'react'
+// Import Swiper React components
 import ProjectCard from '../components/ProjectCard'
-import down from '../images/bottom-arrow.png'
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import { Pagination, Navigation } from "swiper";
 
 const john_cena = {
     title: "john cena!", 
@@ -40,25 +48,32 @@ const n_n = {
 
 const projects = [john_cena, reverbify, life_on_mars, pricify, stroke_prediction, n_n]
 
-const Projects = () => {
-  return (
-    <section id="projects-page" className='projects'>
-        <div className="title">
-            <p className='highlight'>what have i made?</p>
-        </div>
-        <div className='proj-container scroll-wheel'>
-            {projects.map(items => <ProjectCard project={items}/>)}
-        </div>
+const Test = () => {
 
-        <a href='#about-page' className='bot-btn'>
-          <img src={down} alt="bottom" style={{width:"30px", height:"30px"}}></img>
-        </a>
-        
-    </section>
-    
-  )
-}
+    return (
+        <section>
+            <Swiper
+                slidesPerView={3}
+                spaceBetween={30}
+                slidesPerGroup={1}
+                loop={true}
+                loopFillGroupWithBlank={true}
+                pagination={{
+                  clickable: true,
+                }}
+                // navigation={true}
+                navigation={{
+                    nextEl: ".image-swiper-button-next",
+                    prevEl: ".image-swiper-button-prev",
+                    disabledClass: "swiper-button-disabled"
+                  }}
+                modules={[Pagination, Navigation]}
+                className="mySwiper slider-container"
+            >
+                {projects.map(items => <SwiperSlide><ProjectCard project={items}/></SwiperSlide>)}
+            </Swiper>
+        </section>
+    );
+};
 
-
-
-export default Projects
+export default Test;
