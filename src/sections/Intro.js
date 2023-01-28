@@ -10,7 +10,7 @@ const Intro = () => {
           <p id="school-intro">i am a junior computer science student at the university of texas at austin!</p>
           <p id="hobby-intro">i like to play basketball, soccer, catan, and watch horror movies.</p>
         </div>
-        <a href='#work-page' className='bot-btn'>
+        <a href='#work-page' className='bot-btn' style={{width:"30px", height:"30px"}}>
           <img src={down} alt="bottom" style={{width:"30px", height:"30px"}}></img>
         </a>
       </div>

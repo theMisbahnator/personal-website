@@ -12,7 +12,7 @@ const Skills = () => {
     <section id="skills-page" className="languages">
         {/* <p className="title" style={{fontSize:"33px"}}>what do i know?</p> */}
         <SkillsList className="center" languages={languages} frameworks={frameworks} tools={tools}/>
-        <a href='#projects-page' className='bot-btn'>
+        <a href='#projects-page' className='bot-btn' style={{width:"30px", height:"30px"}}>
             <img src={down} alt="bottom" style={{width:"30px", height:"30px"}}></img>
         </a>
     </section>

@@ -114,7 +114,7 @@ const Work = () => {
                     </div>
                 </div>
 
-            <a href='#skills-page' className='bot-btn' style={{top:"90%"}}>
+            <a href='#skills-page' className='bot-btn' style={{top:"90%", width:"30px", height:"30px"}}>
                 <img src={down} alt="bottom" style={{width:"30px", height:"30px"}}></img>
             </a>
         </section>

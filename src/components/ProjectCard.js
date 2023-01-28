@@ -12,14 +12,15 @@ const ProjectCard = ({project}) => {
         onMouseEnter={() => setTitle(false)}
         onMouseLeave={() => setTitle(true)}
         onClick={()=>setBoxClick(!onBoxClick)}
-        style={{cursor: "pointer"}}
     >
         { (!onBoxClick && onTitle) 
-            ? <div className='content' >
+            ? <div className='content'>
                 <p className='project-title'>{project.title}</p>
             </div>
             : <div className='content'>
-                <p className='project-desc under-hover'>{project.desc}</p>
+                <a className='about-links' href={project.link}>
+                    <p className='project-desc under-hover'>{project.desc}</p>
+                </a>
                 <p className='project-skills'>{project.skills}</p>
             </div>
         }
