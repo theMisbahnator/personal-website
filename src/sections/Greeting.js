@@ -1,12 +1,22 @@
-import React from 'react'
+import {React, useRef, useEffect, useState} from 'react'
 import down from '../images/bottom-arrow.png'
+import WavyText from '../components/WavyText'
 
 const Greeting = () => {
+  const myRef = useRef(); 
+  const [isVisible, setVisible] = useState(true)
+  useEffect(() => {
+    const observer = new IntersectionObserver((ref) => {
+      setVisible(ref[0].isIntersecting); 
+    })
+    observer.observe(myRef.current)
+  }, [])
+
   return (
     <section id="greeting-page" className="greeting">
-      <div>
-        <div id="greeting-text">hello!</div>
-        <div style={{fontSize:"20px"}}>site still under construction...</div>
+      <div ref = {myRef} >
+        <WavyText id="greeting-text" text="hello!" replay={isVisible} cName="greeting"/>
+        <div style={{fontSize:"26px", position: "absolute", top: "0", left:"0"}}>site still under construction...</div>
         <a href='#intro-page' className='bot-btn'>
           <img src={down} alt="bottom" style={{width:"30px", height:"30px"}}></img>
         </a>

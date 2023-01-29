@@ -20,7 +20,7 @@ function setPos(val) {
 
 function List({list, key}) {
     return <ul className="list-skills">
-        {list.map(item => <Item key={key++} item={item}/>)} 
+        {list.map(item => <Item key={langKey++} item={item}/>)} 
     </ul>; 
 }
 
