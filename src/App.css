@@ -39,6 +39,7 @@ section {
   /* display: flex;
   justify-content: center;
   align-items: center; */
+  z-index: 1;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -48,7 +49,7 @@ section {
   top: 85%; 
 }
 
-/* svg {
+svg {
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -57,23 +58,6 @@ section {
   width:100%;
   height:100%;
 }
-
-@keyframes change-color {
-  0% {
-    opacity: 0;
-    filter: blur(5px);
-  }
-  100% {
-    opacity: 1;
-    filter: blur(0);
-  }
-}
-
-.fade-in {
-  animation-name: change-color;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
-} */
 
 .title {
   text-align: center;
@@ -409,11 +393,22 @@ a {
   .greeting {
     font-size: 50px; 
   }
+
   .intro {
     font-size: 20px;
   }
 
-  
+  /* controls languages sizes */
+  .list-skills {
+    font-size: 12px;
+  }
+  .item {
+      width: 230px;
+      height: 300px;
+  }
+  .grid-container {
+    font-size: 18px;
+  }
 
   .projects {
     grid-template-rows: 130px 550px;
@@ -429,7 +424,6 @@ a {
   .proj-container {
     /* height: 500px; */
     height: 100%;
-    border: dashed khaki;
     display: flex;
     flex-wrap: wrap;
   }
@@ -444,7 +438,28 @@ a {
 }
 
 
-/* @media (max-width: 950px) {
+@media (max-width: 950px) {
+
+  .greeting {
+    font-size: 45px; 
+  }
+
+  .intro {
+    font-size: 15px;
+  }
+
+  /* controls languages sizes */
+  .list-skills {
+    font-size: 10px;
+  }
+  .item {
+      width: 180px;
+      height: 230px;
+  }
+  .grid-container {
+    font-size: 14px;
+  }
+
   .proj-container {
     grid-template-columns: repeat(2, 1fr);
     height: 600px;
@@ -467,9 +482,32 @@ a {
   .highlight {
     font-size: 70%;
   }
-} */
+}
 
 @media (max-width: 630px) {
+
+  .greeting {
+    font-size: 42px; 
+  }
+
+  .intro {
+    font-size: 12px;
+  }
+
+  /* controls languages sizes */
+  .list-skills {
+    font-size: 8px;
+  }
+  .item {
+      width: 140px;
+      height: 200px;
+  }
+  .grid-container {
+    font-size: 12px;
+  }
+
+
+
   .proj-container {
     grid-template-columns: repeat(2, 1fr);
     border: solid gray;
@@ -500,6 +538,32 @@ a {
 }
 
 @media (max-width: 450px) {
+
+  
+  .greeting {
+    font-size: 40px; 
+  }
+
+  .intro {
+    font-size: 10px;
+  }
+
+  /* controls languages sizes */
+  .list-skills {
+    font-size: 8px;
+  }
+  .item {
+      width: 100px;
+      height: 150px;
+  }
+  .grid-container {
+    font-size: 10px;
+  }
+
+
+
+
+
   .proj-container {
     /* grid-template-columns: repeat(1, 1fr); */
     border: solid gray;

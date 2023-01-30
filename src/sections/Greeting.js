@@ -1,29 +1,23 @@
-import {React, useRef, useEffect, useState} from 'react'
-import down from '../images/bottom-arrow.png'
+import {React} from 'react'
 import WavyText from '../components/WavyText'
+import { useInView } from 'react-intersection-observer';
+import '../background.css'
+import DownButton from '../components/DownButton';
 
 const Greeting = () => {
-  const myRef = useRef(); 
-  const [isVisible, setVisible] = useState(true)
-  useEffect(() => {
-    const observer = new IntersectionObserver((ref) => {
-      setVisible(ref[0].isIntersecting); 
-    })
-    observer.observe(myRef.current)
-  }, [])
+  const {ref: myRef, inView: isVisible} = useInView();
 
   return (
     <section id="greeting-page" className="greeting">
       <div ref = {myRef} >
+        {/* <div id="stars3"></div> */}
         <WavyText id="greeting-text" text="hello!" replay={isVisible} cName="greeting"/>
-        <div style={{fontSize:"26px", position: "absolute", top: "0", left:"0"}}>site still under construction...</div>
-        <a href='#intro-page' className='bot-btn'>
+        <DownButton page ='#intro-page' />
+        {/* <a href='#intro-page' className='bot-btn'>
           <img src={down} alt="bottom" style={{width:"30px", height:"30px"}}></img>
-        </a>
+        </a> */}
       </div>
-
-      {/* <svg id="visual" preserveAspectRatio="none" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+      {/* <svg id="visual" preserveAspectRatio="none" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="grad1_0" x1="43.8%" y1="0%" x2="100%" y2="100%">
             <stop offset="14.444444444444446%" stop-color="#001220" stop-opacity="1"></stop>
@@ -46,13 +40,13 @@ const Greeting = () => {
             d="M0 324C-18.4 289.4 -36.9 254.7 -68.3 255C-99.8 255.3 -144.2 290.5 -162 280.6C-179.8 270.7 -170.8 215.7 -191.6 191.6C-212.4 167.6 -262.9 174.6 -271.9 157C-280.9 139.4 -248.4 97.3 -250.2 67C-251.9 36.8 -288 18.4 -324 0L0 0Z"
             fill="#e9ecef"></path>
         </g>
-        <g transform="translate(960, 0)" style="visibility:hidden">
+        <g transform="translate(960, 0)" style={{visibility:"hidden"}}>
           <path id="blobt5"
             d="M0 324C-13.2 283.6 -26.4 243.3 -48 241.3C-69.6 239.3 -99.5 275.6 -111.7 269.8C-124 264 -118.5 216 -137.2 205.4C-156 194.8 -199 221.5 -216.4 216.4C-233.7 211.3 -225.4 174.3 -225.3 150.6C-225.3 126.8 -233.4 116.4 -253.1 104.9C-272.8 93.4 -304 80.9 -317.8 63.2C-331.5 45.6 -327.8 22.8 -324 0L0 0Z"
             fill="#BDC2BF"></path>
         </g>
 
-        <g transform="translate(0, 540)" style="visibility:hidden">
+        <g transform="translate(0, 540)"  style={{visibility:"hidden"}}>
           <path id="blobb7"
             d="M0 -243C30 -236.9 60 -230.9 91.5 -220.8C122.9 -210.7 155.9 -196.6 171.8 -171.8C187.8 -147 186.8 -111.5 195.9 -81.1C204.9 -50.7 223.9 -25.4 243 0L0 0Z"
             fill="#EEC643"></path>

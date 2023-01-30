@@ -5,6 +5,7 @@ import Skills from './sections/Skills';
 import Work from './sections/Work';
 import AboutMe from './sections/AboutMe';
 import Projects from './sections/Projects';
+import './background.css'
 
 function App() {
   return (

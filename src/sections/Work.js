@@ -5,7 +5,7 @@ import Ibm from '../images/ibm.png'
 import Paycom from '../images/paycom.png'
 import Nordstrom from '../images/nord.png'
 import Gray_Nord from '../images/nordstrom.png'
-import down from '../images/bottom-arrow.png'
+import DownButton from '../components/DownButton'
 
 
 const paycom = {
@@ -114,9 +114,8 @@ const Work = () => {
                     </div>
                 </div>
 
-            <a href='#skills-page' className='bot-btn' style={{top:"90%", width:"30px", height:"30px"}}>
-                <img src={down} alt="bottom" style={{width:"30px", height:"30px"}}></img>
-            </a>
+
+            <DownButton page="#skills-page"/>
         </section>
     )
 }

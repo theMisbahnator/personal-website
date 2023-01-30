@@ -45,7 +45,7 @@ const WavyText = (props) => {
 
   return (
     <motion.h1
-      style={{ display: "flex", overflow: "hidden", margin:0, fontWeight: "normal"}}
+      style={{ display: "flex", overflow: "hidden", margin:0, fontWeight: "normal", zIndex:"10"}}
       className = {cName}
       variants={container}
       initial="hidden"

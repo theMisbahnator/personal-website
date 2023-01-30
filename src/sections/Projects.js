@@ -76,8 +76,6 @@ const Projects = () => {
                     slidesPerGroup={1}
                     loop={true}
                     loopFillGroupWithBlank={true}
-                    showsPagination={false}
-                    // navigation={true}
                     navigation={{
                         nextEl: ".image-swiper-button-next",
                         prevEl: ".image-swiper-button-prev",
