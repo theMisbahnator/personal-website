@@ -55,7 +55,7 @@ const Work = () => {
     useEffect(() => {
         setTimeout(() => {
             setReload(true);
-        }, 600);
+        },400);
         setReload(false);
         console.log("done");
       }, [isJob]);
@@ -65,22 +65,19 @@ const Work = () => {
 
     const expand = {
         hidden: {
-            width: 0,
+            scale: 0,
             opacity: 0, 
-            x: '70%'
         },
         visible: {
-            width: "100%",
-            x: 0,
+            scale: 1,
             opacity: 1, 
             transition: {
-                duration: 0.25,
-                delay: 0.15,
                 type: "spring",
                 damping: 25
             }
         },
         exit: {
+            scale: 0,
             opacity: 0, 
         }
     }
@@ -104,7 +101,7 @@ const Work = () => {
                             work={isJob.work} skills={isJob.skills} image={isJob.image} show={true}></WorkCard>
                 }
             </motion.div>
-            <WorkPlaces paycom={paycom} ibm={ibm} nordstrom={nordstrom} atlassian={atlassian} placeHolder={placeHolder} isJob={isJob} setJob={setJob} setReload={setReload} />
+            <WorkPlaces paycom={paycom} ibm={ibm} nordstrom={nordstrom} atlassian={atlassian} placeHolder={placeHolder} isJob={isJob} setJob={setJob} isVisible={isVisible} />
             <DownButton page="#skills-page" />
         </section>
     )

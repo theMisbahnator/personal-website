@@ -12,7 +12,6 @@ const SlideText = ({text, side, present, delay}) => {
           x: "0",
           opacity: 1, 
           transition: {
-            duration: 0.1, 
             delay: delay, 
             type: "spring", 
             damping: 25
