@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import WorkCard from '../components/WorkCard'
 import Atlassian from '../images/atlassian.png'
 import Ibm from '../images/ibm.png'
 import Paycom from '../images/paycom.png'
-import Nordstrom from '../images/nord.png'
 import Gray_Nord from '../images/nordstrom.png'
 import DownButton from '../components/DownButton'
+import { motion } from "framer-motion";
+import { WorkPlaces } from '../components/WorkPlaces'
+import { useInView } from 'react-intersection-observer';
 
 
 const paycom = {
@@ -46,76 +48,64 @@ const placeHolder = {
     message: "where have i worked"
 }
 
-// let index = 0;
-
-// const workplaces = [paycom, ibm, nordstrom, atlassian]
-
 const Work = () => {
     const [isJob, setJob] = useState(placeHolder);
-    const [paycomGray, setPaycomGray] = useState("grayscale(100%)");
-    const [ibmGray, setibmGray] = useState("grayscale(100%)");
-    const [atlGray, setatlGray] = useState("grayscale(100%)");
+    const [reload, setReload] = useState(true);
+    
+    useEffect(() => {
+        setTimeout(() => {
+            setReload(true);
+        }, 600);
+        setReload(false);
+        console.log("done");
+      }, [isJob]);
 
-    const handleClick = (company) => {
-        if (isJob === company) {
-            console.log("same job ebing clicked");
-            setatlGray("grayscale(100%)");
-            setibmGray("grayscale(100%)");
-            setPaycomGray("grayscale(100%)");
-            nordstrom.image = Gray_Nord;
-            setJob(placeHolder);
-            return;
-        }
-        if (company === paycom) {
-            setJob(paycom);
-            setPaycomGray("grayscale(0)");
-            setatlGray("grayscale(100%)");
-            setibmGray("grayscale(100%)");
-            nordstrom.image = Gray_Nord;
-        } else if (company === ibm) {
-            setJob(ibm);
-            setibmGray("grayscale(0)");
-            setatlGray("grayscale(100%)");
-            setPaycomGray("grayscale(100%)");
-            nordstrom.image = Gray_Nord;
-        } else if (company === atlassian) {
-            setJob(atlassian);
-            setatlGray("grayscale(0)");
-            setibmGray("grayscale(100%)");
-            setPaycomGray("grayscale(100%)");
-            nordstrom.image = Gray_Nord;
-        } else {
-            setJob(nordstrom);
-            setatlGray("grayscale(100%)");
-            setibmGray("grayscale(100%)");
-            setPaycomGray("grayscale(100%)");
-            nordstrom.image = Nordstrom;
+
+    const { ref: myRef, inView: isVisible } = useInView();
+
+    const expand = {
+        hidden: {
+            width: 0,
+            opacity: 0, 
+            x: '70%'
+        },
+        visible: {
+            width: "100%",
+            x: 0,
+            opacity: 1, 
+            transition: {
+                duration: 0.25,
+                delay: 0.15,
+                type: "spring",
+                damping: 25
+            }
+        },
+        exit: {
+            opacity: 0, 
         }
     }
 
     return (
         <section id="work-page" className="work">
-                <div  className= "work-cont" style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                        {
-                            isJob === placeHolder 
-                                ? <div className='work-card' style={{display: "flex", justifyContent: "center", alignItems: "center", fontSize:"35px"}} >where have i worked?</div>
-                                : <WorkCard key={0} name={isJob.name} title={isJob.title} term={isJob.term}
-                                work={isJob.work} skills={isJob.skills} image={isJob.image} show={true}></WorkCard>
-                        }
-                </div>
-                
-                <div className='select-cont' style={{display:"grid", gridTemplateRows:"1f 1f"}}>
-                    <p style={{fontSize:"18px", textAlign:"center"}}>press me!</p>
-                    <div className='jobs' style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
-                        <img className="logo" src={paycom.image} alt={"paycom"} style={{ filter: paycomGray }} onClick={() => { handleClick(paycom) } } />
-                        <img className="logo" src={ibm.image} alt={"ibm"} style={{ filter: ibmGray }} onClick={() => { handleClick(ibm) }} />
-                        <img className="logo" src={nordstrom.image} alt={"nordstrom"} onClick={() => { handleClick(nordstrom) }} />
-                        <img className="logo" src={atlassian.image} alt={"atlassian"} style={{ filter: atlGray }} onClick={() => { handleClick(atlassian) }} />
-                    </div>
-                </div>
-
-
-            <DownButton page="#skills-page"/>
+            <div ref={myRef} style={{ position: "absolute", top: "50%", left: "50%" }}></div>
+            <motion.div className="work-cont" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+                variants={expand}
+                initial='hidden'
+                animate={isVisible && reload ? "visible" : 'exit'}
+            >
+                {
+                    isJob === placeHolder
+                        ? <motion.div className='work-card' style={{ display: "flex", justifyContent: "center", alignItems: "center", fontSize: "35px" }}
+                            initial={{ opacity: 0 }}
+                            animate={(isVisible && reload) ? { opacity: 1 } : { opacity: 0 }}
+                            transition={{ duration: 0.5, ease: 'easeInOut', delay: .4 }}
+                        >where have i worked?</motion.div>
+                        : <WorkCard key={0} name={isJob.name} title={isJob.title} term={isJob.term}
+                            work={isJob.work} skills={isJob.skills} image={isJob.image} show={true}></WorkCard>
+                }
+            </motion.div>
+            <WorkPlaces paycom={paycom} ibm={ibm} nordstrom={nordstrom} atlassian={atlassian} placeHolder={placeHolder} isJob={isJob} setJob={setJob} setReload={setReload} />
+            <DownButton page="#skills-page" />
         </section>
     )
 }
