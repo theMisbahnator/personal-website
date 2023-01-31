@@ -10,7 +10,6 @@ const Greeting = () => {
   return (
     <section id="greeting-page" className="greeting">
       <div ref = {myRef} >
-        {/* <div id="stars3"></div> */}
         <WavyText id="greeting-text" text="hello!" replay={isVisible} cName="greeting"/>
         <DownButton page ='#intro-page' />
         {/* <a href='#intro-page' className='bot-btn'>

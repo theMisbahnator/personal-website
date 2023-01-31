@@ -32,8 +32,8 @@ const nordstrom = {
     name: "nordstrom",
     title: "software intern",
     term: "spring 2023",
-    work: "working on a data analytics project that deals with displaying sales information to employees.",
-    skills: "tbd",
+    work: "data services team building a pipline for sales information",
+    skills: "java spring boot · aws rds/lambda · terradata · docker · kubernetes · new relic · splunk",
     image: Gray_Nord
 }
 const atlassian = {
@@ -57,7 +57,6 @@ const Work = () => {
             setReload(true);
         },400);
         setReload(false);
-        console.log("done");
       }, [isJob]);
 
 
