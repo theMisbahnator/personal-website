@@ -91,7 +91,7 @@ const Work = () => {
             >
                 {
                     isJob === placeHolder
-                        ? <motion.div className='work-card' style={{ display: "flex", justifyContent: "center", alignItems: "center", fontSize: "35px" }}
+                        ? <motion.div className='work-card' style={{ textAlign:"center", display: "flex", justifyContent: "center", alignItems: "center", fontSize: "35px" }}
                             initial={{ opacity: 0 }}
                             animate={(isVisible && reload) ? { opacity: 1 } : { opacity: 0 }}
                             transition={{ duration: 0.5, ease: 'easeInOut', delay: .4 }}
