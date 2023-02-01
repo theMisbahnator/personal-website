@@ -238,6 +238,40 @@ svg {
   cursor: pointer;
 }
 
+.proj-card {
+  width: 450px;
+  height: 450px;
+  font-size: 20px;
+  border-radius: 3%;
+  color: #E9ECEF;
+  /* display: flex;
+  flex-flow: column wrap; */
+  border: solid #FFFFFF;
+  /* align-items: center;
+  justify-content: center;
+  text-align: center; */
+  /* padding: 0 50px 0 50px; */
+}
+
+.p-title-size {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.p-desc-size {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  /* margin: 20px 10px 10px 40px; */
+}
+.p-skills-size {
+  font-size: 12px;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .proj-container {
   /* display: flexbox;
   justify-content: center;
@@ -301,7 +335,7 @@ svg {
 
 .griddy {
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   justify-content: center;
 }
