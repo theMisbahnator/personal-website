@@ -12,7 +12,7 @@ import reverb from '../images/reverb.jpeg'
 import nn from '../images/nn.png'
 import stroke from '../images/strk.jpeg'
 
-
+import { useState, useEffect } from 'react';
 
 // Import Swiper styles
 import "swiper/css";
@@ -74,6 +74,15 @@ const projects = [john_cena, reverbify, life_on_mars, pricify, stroke_prediction
 
 const Projects = () => {
     
+    const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
     return (
         <section id="projects-page" className='projects'>
@@ -85,8 +94,8 @@ const Projects = () => {
                         <img className='swiper-button image-swiper-button-prev' src={leftArrow} alt='leftArrow' />
                     </div>
                 <Swiper
-                    slidesPerView={1}
-                    spaceBetween={30}
+                    slidesPerView={width > 900 ? 3 : 1}
+                    spaceBetween={10}
                     direction={"horizontal"}
                     slidesPerGroup={1}
                     loop={true}
@@ -105,8 +114,9 @@ const Projects = () => {
                     <img className='swiper-button image-swiper-button-next' src={rightArrow} alt='rightArrow' />
                 </div>
             </div>
-            <a href='#about-page' className='bot-btn' style={{width:"30px", height:"30px"}}>
-                <img src={down} alt="bottom" style={{width:"30px", height:"30px"}}></img>
+
+            <a href='#about-page' style={{display:"flex", justifyContent:"center", alignContent:"center", height:width > 450 ? "30px" : "25px"}}>
+                <img src={down} alt="bottom" style={{width:width > 450 ? "30px" : "25px", height:width > 450 ? "30px" : "25px"}}></img>
             </a>
         </section>
     );

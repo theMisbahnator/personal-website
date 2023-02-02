@@ -239,8 +239,10 @@ svg {
 }
 
 .proj-card {
-  width: 450px;
-  height: 450px;
+  /* width: 450px; */
+  /* width: min(80%, 450px); */
+  width: clamp(50%, 350px, 75%);
+  height: 500px;
   font-size: 20px;
   border-radius: 3%;
   color: #E9ECEF;
@@ -259,7 +261,7 @@ svg {
 }
 
 .p-desc-size {
-  font-size: 15px;
+  font-size: 12px;
   margin-top: 10px;
   margin-left: 5px;
   margin-right: 5px;
@@ -293,13 +295,15 @@ svg {
   font-size: 80%;
   color: #FFFFFF;
   background-color: #1A1A1D;
-  display: grid;
-  grid-template-rows: 300px 300px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   align-items: center;
+
 
   /* grid-template-rows: 1fr 2fr; */
   /* display: flex;
-  justify-content: center;
+  ;
   align-items: center; */
   /* margin: auto; */
 }
@@ -334,8 +338,9 @@ svg {
 }
 
 .griddy {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  display: flex;
+  flex-flow: row wrap;
+  /* grid-template-columns: 1fr 2fr 1fr; */
   align-items: center;
   justify-content: center;
 }
@@ -367,7 +372,7 @@ svg {
 }
 
 .swiper {
-  width: 100%;
+  width: 80%;
   height: 100%;
 }
 
@@ -457,7 +462,8 @@ a {
   } */
 
   .projects {
-    grid-template-rows: 130px 550px;
+    display: flex;
+    flex-flow: row wrap;
   }
 
   .project-card {
@@ -511,6 +517,8 @@ a {
 
   .projects {
     font-size: 50%;
+    display: flex;
+    flex-flow: row wrap;
   }
   .project-card {
     font-size: 20%;
@@ -620,6 +628,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
     width: 300px;
     height: 400px;
     overflow: hidden;
