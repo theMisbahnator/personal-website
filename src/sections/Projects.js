@@ -97,7 +97,7 @@ const Projects = () => {
                     slidesPerView={width > 900 ? 3 : 1}
                     spaceBetween={10}
                     direction={"horizontal"}
-                    slidesPerGroup={1}
+                    slidesPerGroup={width > 900 ? 3 : 1}
                     loop={true}
                     loopFillGroupWithBlank={true}
                     navigation={{
