@@ -11,7 +11,8 @@ import price from '../images/price.png'
 import reverb from '../images/reverb.jpeg'
 import nn from '../images/nn.png'
 import stroke from '../images/strk.jpeg'
-
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 import { useState, useEffect } from 'react';
 
 // Import Swiper styles
@@ -75,6 +76,7 @@ const projects = [john_cena, reverbify, life_on_mars, pricify, stroke_prediction
 const Projects = () => {
     
     const [width, setWidth] = useState(window.innerWidth);
+    const {ref: myRef, inView: isVisible} = useInView();
 
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
@@ -84,10 +86,36 @@ const Projects = () => {
     };
   }, []);
 
+  const expand = {
+    hidden: {
+        scale: 0,
+        opacity: 0,
+    },
+    visible: {
+        delay: 1,
+        scale: 1,
+        opacity: 1,
+        transition: {
+            duration: 2,
+            type: "spring",
+            damping: 25
+        }
+    },
+    exit: {
+        scale: 0,
+        opacity: 0,
+    }
+    }
+
     return (
         <section id="projects-page" className='projects'>
-            <div className="title">
-                <p className='highlight' style={{fontSize:"30px"}}>what have i made?</p>
+            <div ref={myRef}className="title">
+                {/* <WavyText text="what have i made?" replay={isVisible} cName="project-title"/> */}
+                <motion.p className='highlight' style={{fontSize:"30px"}}
+                    variants={expand}
+                    initial='hidden'
+                    animate={isVisible ? "visible" : "exit"}
+                >what have i made?</motion.p>
             </div>
             <div className='griddy'>
                     <div className="" style={{width:"32px", margin:"auto"}}>

@@ -1,7 +1,6 @@
 import {React} from 'react'
 import WavyText from '../components/WavyText'
 import { useInView } from 'react-intersection-observer';
-import '../background.css'
 import DownButton from '../components/DownButton';
 
 const Greeting = () => {

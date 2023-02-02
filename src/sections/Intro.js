@@ -1,6 +1,5 @@
 import React from 'react'
 import { useInView } from 'react-intersection-observer';
-import '../background.css'
 import DownButton from '../components/DownButton'
 import SlideText from '../components/SlideText';
 

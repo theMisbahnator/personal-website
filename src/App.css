@@ -9,7 +9,7 @@ html, body {
   font-size: 60px;
   /* background-color: #32373B; */
   background-color: #1A1A1D;
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   /* overflow-x: hidden; */
 }
@@ -171,6 +171,8 @@ svg {
 
 }
 
+
+
 .center {
   text-align: center;
 }
@@ -324,7 +326,7 @@ svg {
 
 .project-title {
   /* margin-top: 70px; */
-  font-size: 150%;
+  font-size: 30px;
 }
 
 .slider-container {
@@ -532,6 +534,9 @@ a {
 @media (max-width: 630px) {
   .intro {
     font-size: 18px;
+  }
+  html, body {
+    scroll-snap-type: y proximity;
   }
 
   .logo{

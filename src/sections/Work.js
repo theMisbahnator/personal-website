@@ -33,7 +33,7 @@ const nordstrom = {
     title: "software intern",
     term: "spring 2023",
     work: "data services team building a pipline for sales information",
-    skills: "java spring boot · aws rds/lambda · terradata · docker · kubernetes · new relic · splunk",
+    skills: "tbd",
     image: Gray_Nord
 }
 const atlassian = {
