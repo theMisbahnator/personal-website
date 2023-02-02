@@ -88,33 +88,31 @@ const Projects = () => {
 
   const expand = {
     hidden: {
-        scale: 0,
-        opacity: 0,
-    },
+      opacity: 0,
+      width: 0,
+    }, 
     visible: {
-        delay: 1,
-        scale: 1,
-        opacity: 1,
-        transition: {
-            duration: 2,
-            type: "spring",
-            damping: 25
-        }
-    },
+      width:"85%",
+      opacity: 1, 
+      transition: {
+        delay: .8,
+        type: "spring", 
+        damping: 25
+      }
+    }, 
     exit: {
-        scale: 0,
-        opacity: 0,
+      opacity: 0,
     }
-    }
+  }
 
     return (
         <section id="projects-page" className='projects'>
             <div ref={myRef}className="title">
                 {/* <WavyText text="what have i made?" replay={isVisible} cName="project-title"/> */}
-                <motion.p className='highlight' style={{fontSize:"30px"}}
+                <motion.p className='highlight' style={{fontSize:"35px"}}
                     variants={expand}
                     initial='hidden'
-                    animate={isVisible ? "visible" : "exit"}
+                    animate={isVisible ? "visible" : "hidden"}
                 >what have i made?</motion.p>
             </div>
             <div className='griddy'>

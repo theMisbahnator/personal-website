@@ -215,13 +215,12 @@ svg {
 .languages {
   font-size: 23px;
   display: flex;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  background-color: #1A1A1D;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  
+}
+.languages-title {
+  font-size: 33px;
 }
 
 .project-card {
@@ -604,6 +603,10 @@ a {
   .grid-container {
     font-size: 13px;
     margin-bottom: 60px;
+  }
+
+  .languages-title {
+    font-size: 27px;
   }
 
 
