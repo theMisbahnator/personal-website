@@ -29,10 +29,20 @@ const Proj = ({project}) => {
       variants={expand}
       initial='hidden'
       animate={isVisible ? "visible" : "hidden"}
+      style={{zIndex: 10, overflow: "hidden"}}
     >
-        <div className='proj-img'>
-            <img src={project.img} alt="mars" style={{width:"100%", height: "270px", borderRadius:"3.5%"}}></img>
-        </div>
+        <motion.div className='proj-img' style={{objectFit: "cover", overflow: "hidden", zIndex: -10}}>
+        <a href={project.link}>
+            <motion.img src={project.img} alt="mars" style={{width:"100%", height: "270px", borderRadius:"3.5%", cursor:"pointer"}}
+                  whileHover={{
+                    scale: 1.2,
+                    borderWidth: "55%",
+                    transition: { duration: .75 },
+                  }}
+            ></motion.img>
+        </a>
+            
+        </motion.div>
         <div style={{textAlign:"center"}}>
             <div className='p-title-size'>{project.title}</div>
             <div className='p-desc-size'>{project.desc}</div>
