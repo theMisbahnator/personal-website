@@ -28,7 +28,7 @@ const Skills = () => {
             variants={sect} 
             initial='hidden'
             animate={isVisible ? "show" : "hidden"}
-        >what do i know?</motion.p>
+        >what have i used?</motion.p>
         <div ref = {myRef} style={{position:"absolute", top:"50%", left:"50%"}}></div>
         <SkillsList className="center" languages={languages} frameworks={frameworks} tools={tools} isVisible={isVisible}/>
         <a href='#projects-page' className='bot-btn' style={{width:"30px", height:"30px"}}>

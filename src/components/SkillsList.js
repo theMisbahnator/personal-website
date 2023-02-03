@@ -16,70 +16,55 @@ function List({list, key}) {
     </ul>; 
 }
 
-const sect = {
-    hidden: { scale: 0 },
+const m = {
+    hidden: {scale: 0},
     show: {
         scale: 1,
         transition: {
             type: "spring",
         }
-    },
+    }
 }
 
-const sect2 = {
-    hidden: { scale: 0 },
+const container = {
+    hidden: {},
     show: {
-        scale: 1,
         transition: {
-            delay : .25,
-            type: "spring",
-        }
+            delay: 1.5,
+            staggerChildren: 0.1,
+            delayChildren: 0.3,
+        },
     },
 }
-
-const sect3 = {
-    hidden: { scale: 0 },
-    show: {
-        scale: 1,
-        transition: {
-            delay : .5, 
-            type: "spring",
-        }
-    },
-}
-
-
 
 const SkillsList = ({languages, frameworks, tools, isVisible}) => {
   return (
-    <div className='grid-container'>
+    <motion.div className='grid-container'
+        variants={container}
+        initial="hidden"
+        animate={isVisible ? "show" : "hidden"}
+    >
         <motion.div className='item' style={{textAlign: "left"}}
-            variants={sect} 
-            initial='hidden'
-            animate={isVisible ? "show" : "hidden"}
+            variants={m} 
         >
             <p>languages</p>
             <List list={languages} key={langKey}/>
         </motion.div>
 
         <motion.div className='item' style={{textAlign: "center"}}
-            variants={sect3} 
-            initial='hidden'
-            animate={isVisible ? "show" : "hidden"}
+            variants={m} 
         >
             <p>frameworks and libraries</p>
             <List list={frameworks} key={frameKey}/>
         </motion.div>
 
         <motion.div className='item' style={{textAlign: "right"}}
-            variants={sect2} 
-            initial='hidden'
-            animate={isVisible ? "show" : "hidden"}
+            variants={m} 
         >
             <p>tools</p>
             <List list={tools} key={toolKey}/>
         </motion.div>
-    </div>
+    </motion.div>
   )
 }
 
