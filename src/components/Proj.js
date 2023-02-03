@@ -31,7 +31,7 @@ const Proj = ({project}) => {
       animate={isVisible ? "visible" : "hidden"}
     >
         <div className='proj-img'>
-            <img src={project.img} alt="mars" style={{width:"100%", height: "270px", borderRadius:"5%"}}></img>
+            <img src={project.img} alt="mars" style={{width:"100%", height: "270px", borderRadius:"3.5%"}}></img>
         </div>
         <div style={{textAlign:"center"}}>
             <div className='p-title-size'>{project.title}</div>

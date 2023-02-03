@@ -9,15 +9,6 @@ let langKey = 100;
 let frameKey = 200;
 let toolKey = 300; 
 
-// function setPos(val) {
-//     if (val === 100) {
-//         return "left"; 
-//     } else if (val === 200){
-//         return "center";
-//     }
-//     return "right";
-// }
-
 
 function List({list, key}) {
     return <ul className="list-skills">

@@ -1,5 +1,3 @@
-// Import Swiper React components
-// import ProjectCard from '../components/ProjectCard'
 import Proj from '../components/Proj';
 import { Swiper, SwiperSlide } from "swiper/react";
 import leftArrow from '../images/la.png'
