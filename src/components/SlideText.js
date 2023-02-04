@@ -1,9 +1,9 @@
 import React from 'react'
 import { motion} from "framer-motion";
 
-const SlideText = ({text, side, present, delay}) => {
+const SlideText = ({text, present}) => {
 
-    const dropLeft = {
+    const side = {
         hidden: {
           x: "-100vw",
           opacity: 0
@@ -12,7 +12,6 @@ const SlideText = ({text, side, present, delay}) => {
           x: "0",
           opacity: 1, 
           transition: {
-            delay: delay, 
             type: "spring", 
             damping: 25
           }
@@ -21,32 +20,10 @@ const SlideText = ({text, side, present, delay}) => {
           opacity: 0,
         }
       }
-    
-      const dropRight = {
-        hidden: {
-          x: "100vw",
-          opacity: 0
-        }, 
-        visible: {
-          x: "0",
-          opacity: 1, 
-          transition: {
-            delay: 2, 
-            duration: 0.1, 
-            type: "spring", 
-            damping: 25
-          }
-        },
-        exit: {
-            x: "100vw",
-            opacity: 0
-          }
-      }
-
 
   return (
     <motion.p id="name-intro"
-            variants={side === 'left' ? dropLeft : dropRight}
+            variants={side}
             initial='hidden'
             animate={present ? "visible" : "exit"}
     >

@@ -15,7 +15,7 @@ const paycom = {
     title: "software intern",
     term: "summer 2022",
     work: "created a real time notification service for monitoring payroll transactions and long running processes.",
-    skills: "React.js · Node.js · Express.js · JavaScript · MySQL · Postman",
+    skills: "react.js · node.js · express.js · javaScript · mysql · postman",
     image: Paycom
 }
 
@@ -23,8 +23,8 @@ const ibm = {
     name: "ibm",
     title: "backend intern",
     term: "fall 2022",
-    work: "developed on the spectrum fusion team building storage infrastructure for containerized applications on openShift.",
-    skills: "Golang · Swagger · Python · TravisCI · OpenShift",
+    work: "developed on the spectrum fusion team building storage infrastructure for containerized applications on red hat openshift.",
+    skills: "golang · swagger · python · travisci · openshift",
     image: Ibm
 }
 

@@ -47,7 +47,7 @@ const pricify = {
 
 const life_on_mars = {
     title: "life on mars",
-    desc: "discord bot that provide daily insight on the life on Mars. scraped articles and extracts images from live photos on mars from active rovers.",
+    desc: "discord bot that provide daily insight on the life on mars. scraped articles and extracts images from live photos on mars from active rovers.",
     skills: "python · selenium · heroku", 
     img: mars, 
     link: "https://github.com/theMisbahnator/Life-on-Mars"
@@ -63,7 +63,7 @@ const stroke_prediction = {
 
 const n_n = {
     title: "neural nets",
-    desc: "Neural Nets, TBD",
+    desc: "neural nets, tbd",
     skills: "python · tenserflow · jupiter notebook",
     img: nn,
     link: "https://www.google.com/"
