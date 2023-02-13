@@ -4,7 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: pullout, sans-serif;
   color: #E9ECEF;
   font-size: 60px;
   /* background-color: #32373B; */
@@ -12,6 +12,11 @@ html, body {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   /* overflow-x: hidden; */
+}
+
+@font-face {
+  font-family: 'pullout';
+  src: url('/src/Inter/static/Inter-ExtraLight.ttf'); 
 }
 
 * {
