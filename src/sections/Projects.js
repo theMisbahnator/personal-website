@@ -32,7 +32,7 @@ const john_cena = {
 const reverbify = {
     title: "reverbify",
     desc: "automated audio processing by adding daycore/nightcore twist to musical renditions. created ios app to assemble playlists and stream music.",
-    skills: "swift · golang · gin · aws s3 · mongodb · netlify · docker ",
+    skills: "swift · golang · gin · aws s3 · firebase · google cloud platform · docker",
     img: reverb,
     link: "https://github.com/theMisbahnator/Reverbify"
 }
@@ -111,7 +111,7 @@ const Projects = () => {
                     variants={expand}
                     initial='hidden'
                     animate={isVisible ? "visible" : "hidden"}
-                >what have i made?</motion.p>
+                >what have I made?</motion.p>
             </div>
             <div className='griddy'>
                     <div className="" style={{width:"32px", margin:"auto"}}>

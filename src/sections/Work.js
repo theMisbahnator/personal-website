@@ -14,8 +14,8 @@ const paycom = {
     name: "paycom",
     title: "software intern",
     term: "summer 2022",
-    work: "created a real time notification service for monitoring payroll transactions and long running processes.",
-    skills: "react.js · node.js · express.js · javaScript · mysql · postman",
+    work: "created a real time notification service for monitoring 10,000+ payroll transactions processes reducing data bandwidth usage by 85%.",
+    skills: "react.js · node.js · express.js · javascript · mysql · postman",
     image: Paycom
 }
 
@@ -32,8 +32,8 @@ const nordstrom = {
     name: "nordstrom",
     title: "software intern",
     term: "spring 2023",
-    work: "data services team building a pipline for sales information",
-    skills: "tbd",
+    work: "modernized a data pipeline for providing sales commission information for 86,000+ store employees reducing cloud costs by $11,000 annually.",
+    skills: "java · spring boot · mockito · aws rds · postgresql · swagger · postman",
     image: Gray_Nord
 }
 const atlassian = {
@@ -45,7 +45,7 @@ const atlassian = {
     image: Atlassian
 }
 const placeHolder = {
-    message: "where have i worked"
+    message: "where have I worked"
 }
 
 const Work = () => {
@@ -95,7 +95,7 @@ const Work = () => {
                             initial={{ opacity: 0 }}
                             animate={(isVisible && reload) ? { opacity: 1 } : { opacity: 0 }}
                             transition={{ duration: 0.5, ease: 'easeInOut', delay: .4 }}
-                        >where have i worked?</motion.div>
+                        >where have I worked?</motion.div>
                         : <WorkCard key={0} name={isJob.name} title={isJob.title} term={isJob.term}
                             work={isJob.work} skills={isJob.skills} image={isJob.image} show={true}></WorkCard>
                 }

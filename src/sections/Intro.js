@@ -47,15 +47,11 @@ const Intro = () => {
           my name is misbah imtiaz.
         </motion.p>
         <motion.p variants={side}>
-          i am a junior computer science student at the university of texas at austin!
+          I am a junior computer science student at the university of texas at austin!
         </motion.p>
         <motion.p variants={side}>
-          i like to play basketball, soccer, catan, and watch horror movies.
+          I like to play basketball, soccer, catan, and watch horror movies.
         </motion.p>
-
-          {/* <SlideText text={"my name is misbah imtiaz."} side='left' present={isVisible} delay={0.25} />
-          <SlideText text={"i am a junior computer science student at the university of texas at austin!"} side='left' present={isVisible} delay={0.5} />
-          <SlideText text={"i like to play basketball, soccer, catan, and watch horror movies."} side='left' present={isVisible} delay={.75} /> */}
         </motion.div>
         <DownButton page='#work-page' />
       </div>

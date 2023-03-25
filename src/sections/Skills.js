@@ -4,9 +4,9 @@ import down from '../images/bottom-arrow.png'
 import { useInView } from 'react-intersection-observer';
 import { motion} from "framer-motion";
 
-const languages = ["java", "python", "c, c++", "golang", "javascript", "kotlin", "swift", "sql", "html, css"];
+const languages = ["java", "python", "c, c++", "golang", "javascript", "swift", "kotlin",  "sql", "html, css"];
 const frameworks = ["flask", "gin", "react", "node", "express", "beego", "opencv", "pandas, matplotlib, numpy", "scikit-learn", "javafx"];
-const tools = ["git", "aws s3, rds", "postgresql", "mysql", "firebase", "jupiter notebook", "postman", "swagger", "heroku", "netlify"];
+const tools = ["git", "aws s3, rds", "postgresql", "mysql", "firebase", "google cloud platform", "jupiter notebook", "postman", "swagger", "heroku", "netlify"];
 
 const Skills = () => {
     const {ref: myRef, inView: isVisible} = useInView();
@@ -28,7 +28,7 @@ const Skills = () => {
             variants={sect} 
             initial='hidden'
             animate={isVisible ? "show" : "hidden"}
-        >what have i used?</motion.p>
+        >what have I used?</motion.p>
         <div ref = {myRef} style={{position:"absolute", top:"50%", left:"50%"}}></div>
         <SkillsList className="center" languages={languages} frameworks={frameworks} tools={tools} isVisible={isVisible}/>
         <a href='#projects-page' className='bot-btn' style={{width:"30px", height:"30px"}}>

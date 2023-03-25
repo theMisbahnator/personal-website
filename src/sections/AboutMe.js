@@ -1,6 +1,6 @@
 import React from 'react'
 import misbah from '../images/misbah.jpg'
-import resume from '../images/Misbah_CS_Resume_2023.pdf'
+// import resume from '../images/Misbah_CS_Resume_2023.pdf'
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 
@@ -60,7 +60,7 @@ const AboutMe = () => {
                         </span>
                         <span> | </span>
                         <span className='under-hover'>
-                            <a href={resume} className="about-links" target="_blank" rel="noreferrer">resume</a>
+                            <a href="https://drive.google.com/drive/folders/1PAMCuXyCBGSFhnNLnv0SBOCpgDuZoY3A?usp=sharing" className="about-links" target="_blank" rel="noreferrer">resume</a>
                         </span>
                         <span> | </span>
                         <span className='under-hover'>
