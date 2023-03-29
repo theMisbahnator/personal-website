@@ -22,6 +22,9 @@ const Intro = () => {
       x: "-100vw",
       opacity: 0,
       scale: 0, 
+      transition: {
+        duration: .4, 
+      },
     }, 
     show: {
       x: "0",
@@ -29,7 +32,7 @@ const Intro = () => {
       scale: 1, 
       transition: {
         type: "spring", 
-        damping: 25
+        damping: 25,
       }
     }, 
   }
