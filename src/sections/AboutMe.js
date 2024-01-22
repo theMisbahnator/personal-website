@@ -53,7 +53,7 @@ const AboutMe = () => {
                             <a href="#projects-page" className="about-links">projects</a>
                         </span>
                     </motion.p>
-                    <motion.p variants={above}>class of 24'</motion.p>
+                    <motion.p variants={above}>class of '24</motion.p>
                     <motion.p variants={above}>
                         <span className='under-hover'>
                             <a href="https://github.com/theMisbahnator" className="about-links">github</a>

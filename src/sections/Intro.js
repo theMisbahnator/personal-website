@@ -50,7 +50,7 @@ const Intro = () => {
           my name is misbah imtiaz.
         </motion.p>
         <motion.p variants={side}>
-          I am a junior computer science student at the university of texas at austin!
+          I am a senior computer science student at the university of texas at austin!
         </motion.p>
         <motion.p variants={side}>
           I like to play basketball, soccer, catan, and watch horror movies.

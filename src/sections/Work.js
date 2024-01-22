@@ -40,8 +40,8 @@ const atlassian = {
     name: "atlassian",
     title: "software intern",
     term: "summer 2023",
-    work: "tbd",
-    skills: "tbd",
+    work: "developed ui features for a data portal application dealing with data ingestion, discovery, and visualization responsible for over 100k tables and 50 petabytes of data",
+    skills: "react.js · typescript · javascript · jest",
     image: Atlassian
 }
 const placeHolder = {
