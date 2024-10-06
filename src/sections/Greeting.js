@@ -9,8 +9,9 @@ const Greeting = () => {
   return (
     <section id="greeting-page" className="greeting">
       <div ref = {myRef} >
-        <WavyText id="greeting-text" text="hello!" replay={isVisible} cName="greeting"/>
-        <DownButton page ='#intro-page' />
+        {/* <WavyText id="greeting-text" text="hello!" replay={isVisible} cName="greeting"/>
+        <DownButton page ='#intro-page' /> */}
+        <p>offline</p>
       </div>
     </section>
     
