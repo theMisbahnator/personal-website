@@ -1,21 +1,20 @@
 import './App.css';
 import Greeting from './sections/Greeting';
-import Intro from './sections/Intro';
-import Skills from './sections/Skills';
-import Work from './sections/Work';
-import AboutMe from './sections/AboutMe';
-import Projects from './sections/Projects';
+// import Intro from './sections/Intro';
+// import Skills from './sections/Skills';
+// import Work from './sections/Work';
+// import AboutMe from './sections/AboutMe';
+// import Projects from './sections/Projects';
 
 function App() {
   return (
     <div className="App">
       <Greeting/>
-      <Intro/>
+      {/* <Intro/>
       <Work/>
       <Skills/>
-      {/* <Proj/> */}
       <Projects/>
-      <AboutMe/>
+      <AboutMe/> */}
     </div>
   );
 }
